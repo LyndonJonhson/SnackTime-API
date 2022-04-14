@@ -4,7 +4,7 @@ class Product{
     async findByEstablishment(establishment){
         try{
             var result = await database.select([
-                    "establishments.name",
+                    "establishments.name as establishment",
                     "products.id",
                     "products.name",
                     "products.type",
