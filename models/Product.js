@@ -6,7 +6,7 @@ class Product{
             var result = await database.select().table("establishments_products")
                 .innerJoin("establishments", "establishments.id", "establishments_products.establishment_id")
                 .innerJoin("products", "products.id", "establishments_products.product_id")
-                .where("establishment.name", establishment)
+                .where("establishments.slug", establishment)
             return result;
         }catch(err){
             console.log(err);
