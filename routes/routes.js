@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.get('/', HomeController.index);
 router.get('/estabelecimentos', EstablishmentController.index);
-router.get('/:estabelecimento/produtos', ProductController.index);
+router.get('/:estabelecimento', ProductController.index);
 
 module.exports = router;
